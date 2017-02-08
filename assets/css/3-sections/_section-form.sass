@@ -1,0 +1,46 @@
+/*** =================================================================***/
+/*                             FORM SECTION                             */
+/*** =================================================================***/
+
+form
+  max-width: 450px
+  margin: 0 auto
+
+  input, textarea
+    border: 3px solid $accent
+    width: 100%
+    box-sizing: border-box
+    padding: 10px
+    &:focus
+      outline: none
+      border-color: $accent-light
+
+  [type="submit"]
+    background-color: $accent
+    color: white
+    font-size: 18px
+    text-transform: uppercase
+    width: 33%
+    float: right
+    &:hover
+      background-color: $accent-light
+
+  textarea
+    height: 10em
+
+  .contact-info-group
+    label
+      width: 50%
+      box-sizing: border-box
+
+      &:nth-child(1)
+        padding-right: 5px
+      &:nth-child(2)
+        padding-left: 5px
+
+  label
+    display: block
+    margin-bottom: 20px
+
+    span
+      display: block

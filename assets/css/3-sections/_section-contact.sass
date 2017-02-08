@@ -1,0 +1,47 @@
+/*** =================================================================***/
+/*                            CONTACT SECTION                           */
+/*** =================================================================***/
+
+.section-contact
+  text-align: center
+
+.social-links
+  justify-content: center
+
+.circle
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 40px
+  height: 40px
+  background-color: $accent
+  border-radius: 100%
+  margin: 0 20px
+  transition: all .2s ease-in-out
+  &:hover
+    transform: scale(1.1)
+  a
+    width: 30px
+    height: 30px
+    path, circle
+      fill: white
+
+.bar
+  width: 250px
+  height: 0
+  border-top: 3px solid $accent
+  margin: 50px auto
+
+.biglink
+  font-size: 72px
+  font-weight: 300
+  color: $accent
+  &:hover
+    color: lighten( $accent, 10% )
+
+  @media(max-width: 956px)
+    font-size: 52px
+  @media(max-width: 700px)
+    font-size: 32px
+  @media(max-width: 420px)
+    font-size: 22px

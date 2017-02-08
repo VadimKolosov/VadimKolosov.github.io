@@ -1,0 +1,102 @@
+/*** =================================================================***/
+/*                             WORK SECTION                             */
+/*** =================================================================***/
+.section-work
+  overflow-x: hidden
+
+.work-belt
+  width: 200%
+  position: relative
+  left: 0%
+  transition: all .8s ease-in-out
+  &.slided
+    transform: translate3d(-50%, 0, 0)
+
+.thumb-wrap, .work-wrap
+  width: 50%
+  float: left
+
+.thumb-container
+  max-width: 960px
+  margin: 0 auto
+  display: flex
+  flex-direction: row
+  flex-flow: wrap
+
+.thumb-unit
+  display: block
+  width: 25%
+  position: relative
+  padding-top: 16%
+  overflow: hidden
+  @extend %unit-position
+
+  @media screen and (max-width: 660px)
+    width: 50%
+    padding-top: 26%
+
+
+  .thumb-overlay
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    top: 0%
+    right: 0px
+    left: 0px
+    height: 100%
+    background: fade-out($accent, 0.1)
+    text-align: center
+    opacity: 0
+    transition: all .2s ease-in-out
+
+  &:hover .thumb-overlay
+    opacity: 1
+    @extend %animation
+
+  strong
+    display: block
+    padding: 10px
+    color: white
+    font-weight: 300
+    text-transform: uppercase
+    font-size: 20px
+    line-height: 1.2
+
+.work-container
+  max-width: 600px
+  margin: 0 auto
+  position: relative
+  display: none
+
+  .work-return
+    width: 40px
+    height: 40px
+    cursor: pointer
+    opacity: 0.5
+    position: absolute
+    top: -8px
+    left: -60px
+    path
+      fill: rgba(0,0,0,0.4)
+
+    &:hover
+      opacity: 1
+  h4
+    color: $accent
+    font-weight: 300
+    text-transform: uppercase
+    font-size: 20px
+    line-height: 1.2
+    margin: 0 0 20px
+  img
+    width: 100%
+    margin-bottom: 20px
+
+@media (max-width: 740px)
+  .work-container
+    .work-return
+      left: 0
+
+    h4
+      margin-left: 60px

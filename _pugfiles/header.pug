@@ -1,0 +1,13 @@
+header#header
+  .nav-menu-wrapper.flex-row
+    .logo {% include icons/logo.html %}
+    nav.main-menu
+      a(href="#about-me") About Me
+      a(href="#work") Work
+      a(href="#clients") Clients
+      a(href="#footer") Contact
+
+  h1.site-name
+    span {{ site.data.settings.title }}
+
+  p.kicker {{ site.data.settings.description }}

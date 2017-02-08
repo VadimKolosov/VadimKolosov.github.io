@@ -1,0 +1,16 @@
+section.alt-section.section-work
+  h3#work Work
+
+  .work-belt
+    .thumb-wrap
+      .thumb-container {% for project in site.data.settings.projects %}
+        .thumb-unit(data-folder="{{ project.folder }}", style="background-image: url(/assets/img/work/{{project.folder}}/thumb.jpg);")
+          .thumb-overlay
+            strong {{ project.name }}
+        | {% endfor %}
+
+    .work-wrap
+      .work-container
+        .work-return {% include icons/icon-back.html%}
+        h4.project-title Do Work
+        .poject-load
